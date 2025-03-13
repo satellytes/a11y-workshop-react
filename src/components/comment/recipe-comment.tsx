@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Define the props interface for the component
 interface RecipeCommentProps {
   username: string;
   date: string;
@@ -10,7 +9,6 @@ interface RecipeCommentProps {
   likes: number;
 }
 
-// Styled components
 const CommentContainer = styled.div`
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-default);

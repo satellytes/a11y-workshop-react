@@ -1,10 +1,11 @@
 import RecipeCardDetails from '../../components/recipe-card/recipe-card-details.tsx';
 import RecipeComment from '../../components/comment/recipe-comment.tsx';
 import RecipeCommentSection from '../../components/comment/recipe-comment-section.tsx';
+import RecipeWrapper from '../../components/recipe-wrapper/recipe-wrapper.tsx';
 
 const PotatoChips = () => {
   return (
-    <>
+    <RecipeWrapper>
       <h1>Wacky Potato Chips Recipe</h1>
       <RecipeCardDetails rating={3} time={60} />
       <h2>Ingredients:</h2>
@@ -99,7 +100,7 @@ const PotatoChips = () => {
           likes={46}
         ></RecipeComment>
       </RecipeCommentSection>
-    </>
+    </RecipeWrapper>
   );
 };
 

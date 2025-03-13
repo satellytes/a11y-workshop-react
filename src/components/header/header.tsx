@@ -1,13 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
+import logo from '../../../assets/icons/potato.svg';
 
-// Define props interface
-interface SiteHeaderProps {
-  currentPage: 'Home' | 'Recipes' | 'Add Recipe' | 'About';
-}
-
-// Styled components
 const HeaderContainer = styled.header`
   background-color: var(--header-background);
   display: flex;
@@ -31,13 +25,13 @@ const NavigationItems = styled.nav`
 `;
 
 interface NavLinkProps {
-  isActive: boolean;
+  $isActive: boolean;
 }
 
 const NavLink = styled(Link)<NavLinkProps>`
   text-decoration: none;
   cursor: pointer;
-  color: ${(props) => (props.isActive ? 'var(--active)' : 'white')};
+  color: ${(props) => (props.$isActive ? 'var(--active)' : 'white')};
 
   &:hover {
     color: var(--active);
@@ -52,6 +46,9 @@ const Logo = styled(Link)`
   cursor: pointer;
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;
 
 const LogoText = styled.span`
@@ -60,38 +57,42 @@ const LogoText = styled.span`
   }
 `;
 
-const SiteHeader: React.FC<SiteHeaderProps> = ({ currentPage }) => {
+const SiteHeader = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <HeaderContainer className="main-header">
       <Logo to="/">
-        🥔 <LogoText className="logo-text">Potatocook</LogoText>
+        <img alt="" src={logo}></img>
+        <LogoText className="logo-text">Potatocook</LogoText>
       </Logo>
       <NavigationItems className="navigation-items">
         <NavLink
           to="/"
           className="navigation-item"
-          isActive={currentPage === 'Home'}
+          $isActive={currentPath === '/'}
         >
           Home
         </NavLink>
         <NavLink
           to="/recipes"
           className="navigation-item"
-          isActive={currentPage === 'Recipes'}
+          $isActive={currentPath.includes('/recipes')}
         >
           Recipes
         </NavLink>
         <NavLink
           to="/add-recipe"
           className="navigation-item"
-          isActive={currentPage === 'Add Recipe'}
+          $isActive={currentPath.includes('/add-recipe')}
         >
           Add Recipe
         </NavLink>
         <NavLink
           to="/about"
           className="navigation-item"
-          isActive={currentPage === 'About'}
+          $isActive={currentPath.includes('/about')}
         >
           About
         </NavLink>

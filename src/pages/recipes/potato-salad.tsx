@@ -1,10 +1,11 @@
 import RecipeCommentSection from '../../components/comment/recipe-comment-section.tsx';
 import RecipeComment from '../../components/comment/recipe-comment.tsx';
 import RecipeCardDetails from '../../components/recipe-card/recipe-card-details.tsx';
+import RecipeWrapper from '../../components/recipe-wrapper/recipe-wrapper.tsx';
 
 const PotatoSalad = () => {
   return (
-    <>
+    <RecipeWrapper>
       <h1>Quirky Potato Salad Recipe</h1>
       <RecipeCardDetails rating={4} time={45} />
 
@@ -107,7 +108,7 @@ const PotatoSalad = () => {
           likes={27}
         ></RecipeComment>
       </RecipeCommentSection>
-    </>
+    </RecipeWrapper>
   );
 };
 

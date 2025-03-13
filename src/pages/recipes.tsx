@@ -72,6 +72,7 @@ const Recipes = () => {
       <Grid>
         {recipeData.map((recipe) => (
           <RecipeCard
+            key={recipe.title}
             link={recipe.link}
             title={recipe.title}
             description={recipe.description}

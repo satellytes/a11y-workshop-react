@@ -19,7 +19,7 @@ const MainContentWrapper = styled.div``;
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Header currentPage={'Home'} />
+      <Header />
       <MainContentWrapper>
         <Routes>
           <Route path="/" element={<Home />} />

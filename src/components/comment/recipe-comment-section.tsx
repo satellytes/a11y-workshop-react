@@ -6,7 +6,7 @@ interface CommentSectionProps {
 
 const CommentSection: React.FC<CommentSectionProps> = ({ children }) => {
   return (
-    <div className="comments-section">
+    <div>
       <h2>Comments</h2>
       {children}
     </div>

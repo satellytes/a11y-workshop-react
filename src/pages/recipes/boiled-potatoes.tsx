@@ -1,10 +1,11 @@
 import RecipeCardDetails from '../../components/recipe-card/recipe-card-details.tsx';
 import RecipeComment from '../../components/comment/recipe-comment.tsx';
 import RecipeCommentSection from '../../components/comment/recipe-comment-section.tsx';
+import RecipeWrapper from '../../components/recipe-wrapper/recipe-wrapper.tsx';
 
 const BoiledPotatoes = () => {
   return (
-    <>
+    <RecipeWrapper>
       <h1>Silly Salted Potatoes Recipe</h1>
       <RecipeCardDetails rating={3} time={30} />
       <h2>Ingredients:</h2>
@@ -96,7 +97,7 @@ const BoiledPotatoes = () => {
           likes={39}
         ></RecipeComment>
       </RecipeCommentSection>
-    </>
+    </RecipeWrapper>
   );
 };
 

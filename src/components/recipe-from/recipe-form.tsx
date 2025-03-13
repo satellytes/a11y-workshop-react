@@ -1,11 +1,9 @@
 import React, { useState, FormEvent } from 'react';
 import styled from 'styled-components';
 
-// Assuming FormElement component has been converted as well
 import FormElement from './form-element.tsx';
 import LoginModal from './login-modal.tsx';
 
-// Styled components
 const FormContainer = styled.div`
   padding: 20px;
   border-radius: var(--border-radius);
@@ -46,7 +44,6 @@ const SubmitButton = styled.button`
   }
 `;
 
-// Interface for form errors
 interface FormErrors {
   title?: string;
   shortDescription?: string;
@@ -56,7 +53,6 @@ interface FormErrors {
 }
 
 const RecipeForm: React.FC = () => {
-  // State for form values
   const [formValues, setFormValues] = useState({
     title: '',
     cookingTime: '',
@@ -66,19 +62,15 @@ const RecipeForm: React.FC = () => {
     preparation: '',
   });
 
-  // State for form errors
   const [errors, setErrors] = useState<FormErrors>({});
 
-  // State for modal visibility
   const [showLoginModal, setShowLoginModal] = useState(false);
 
-  // Handle input changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { id, value } = e.target;
 
-    // Map the HTML IDs to state property names
     const fieldMap: { [key: string]: string } = {
       title: 'title',
       'cooking-time': 'cookingTime',
@@ -94,25 +86,21 @@ const RecipeForm: React.FC = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     let valid = true;
     const newErrors: FormErrors = {};
 
-    // Validate title
     if (!formValues.title.trim()) {
       newErrors.title = 'Title is required.';
       valid = false;
     }
 
-    // Validate short description
     if (!formValues.shortDescription.trim()) {
       newErrors.shortDescription = 'Short description is required.';
       valid = false;
     }
 
-    // Validate cooking time
     const cookingTime = parseFloat(formValues.cookingTime);
     if (
       !formValues.cookingTime.trim() ||
@@ -123,13 +111,11 @@ const RecipeForm: React.FC = () => {
       valid = false;
     }
 
-    // Validate ingredients
     if (!formValues.ingredients.trim()) {
       newErrors.ingredients = 'Ingredients are required.';
       valid = false;
     }
 
-    // Validate preparation
     if (!formValues.preparation.trim()) {
       newErrors.preparation = 'Preparation steps are required.';
       valid = false;

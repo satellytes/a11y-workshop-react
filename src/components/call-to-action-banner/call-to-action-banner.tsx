@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Define props interface
 interface CallToActionBannerProps {
   title: string;
   text: string;
@@ -11,7 +10,6 @@ interface CallToActionBannerProps {
   isExternal?: boolean;
 }
 
-// Styled components
 const BannerSection = styled.section`
   background-color: var(--main-bg-color-4);
   color: white;

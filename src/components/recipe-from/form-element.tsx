@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Define props interface
 interface FormElementProps {
   label: string;
   inputId: string;
@@ -15,7 +14,6 @@ interface FormElementProps {
   error?: string;
 }
 
-// Styled components
 const FormFieldContainer = styled.div`
   margin-bottom: 16px;
 `;

@@ -1,10 +1,11 @@
 import RecipeCardDetails from '../../components/recipe-card/recipe-card-details.tsx';
 import RecipeComment from '../../components/comment/recipe-comment.tsx';
 import RecipeCommentSection from '../../components/comment/recipe-comment-section.tsx';
+import RecipeWrapper from '../../components/recipe-wrapper/recipe-wrapper.tsx';
 
 const PotatoWedges = () => {
   return (
-    <>
+    <RecipeWrapper>
       <h1>Whimsical Potato Wedges Recipe</h1>
       <RecipeCardDetails rating={4} time={50}></RecipeCardDetails>
 
@@ -100,7 +101,7 @@ const PotatoWedges = () => {
           likes={58}
         ></RecipeComment>
       </RecipeCommentSection>
-    </>
+    </RecipeWrapper>
   );
 };
 

@@ -1,10 +1,11 @@
 import RecipeCardDetails from '../../components/recipe-card/recipe-card-details.tsx';
 import RecipeComment from '../../components/comment/recipe-comment.tsx';
 import RecipeCommentSection from '../../components/comment/recipe-comment-section.tsx';
+import RecipeWrapper from '../../components/recipe-wrapper/recipe-wrapper.tsx';
 
 const FrenchFries = () => {
   return (
-    <>
+    <RecipeWrapper>
       <h1>Crispy Comedy Fries Recipe</h1>
       <RecipeCardDetails rating={4} time={60} />
       <h2>Ingredients:</h2>
@@ -122,7 +123,7 @@ const FrenchFries = () => {
           likes={67}
         ></RecipeComment>
       </RecipeCommentSection>
-    </>
+    </RecipeWrapper>
   );
 };
 
