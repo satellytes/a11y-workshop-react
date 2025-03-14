@@ -3,7 +3,7 @@
   --main-bg-color: #e3c839;
   --main-bg-color-2: #e3b439;
   --main-bg-color-3: #e67b2a;
-  --main-bg-color-4: #e3dd39;
+  --main-bg-color-4: #ffae00;
   --header-background: #e3c984;
   --green: #327735;
   --background-light: rgba(227, 201, 132, 0.11);
@@ -23,5 +23,9 @@ a {
   color: inherit;
 }
 
-
-
+* {
+  &:focus{
+    outline: none;
+    color: green !important;
+  }
+}

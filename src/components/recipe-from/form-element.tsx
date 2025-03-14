@@ -62,7 +62,7 @@ const FormElement: React.FC<FormElementProps> = ({
 }) => {
   return (
     <FormFieldContainer className="form-field-container">
-      <StyledLabel htmlFor={inputId}>
+      <StyledLabel>
         {label}
         {required && (
           <RequiredIndicator className="required-indicator">

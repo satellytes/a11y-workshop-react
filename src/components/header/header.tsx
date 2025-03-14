@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link, useLocation } from 'react-router';
 import logo from '../../../assets/icons/potato.svg';
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.div`
   background-color: var(--header-background);
   display: flex;
   height: 60px;
@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
   top: 0;
 `;
 
-const NavigationItems = styled.nav`
+const NavigationItems = styled.div`
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -29,6 +29,7 @@ interface NavLinkProps {
 }
 
 const NavLink = styled(Link)<NavLinkProps>`
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   color: ${(props) => (props.$isActive ? 'var(--active)' : 'white')};

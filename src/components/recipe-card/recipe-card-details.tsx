@@ -56,7 +56,7 @@ const RecipeCardDetails = ({
     <Details>
       {renderRating()}
       <TimeContainer>
-        <Clock src={clock} alt="Time" />
+        <Clock src={clock} />
         <span>{time}min</span>
       </TimeContainer>
     </Details>
