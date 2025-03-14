@@ -6,9 +6,6 @@ import LoginModal from './login-modal.tsx';
 
 const FormContainer = styled.div`
   padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: #fff;
-  box-shadow: var(--box-shadow-default);
 `;
 
 const StyledForm = styled.form`

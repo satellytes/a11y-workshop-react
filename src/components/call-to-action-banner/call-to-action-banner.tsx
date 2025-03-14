@@ -14,7 +14,6 @@ const BannerSection = styled.section`
   background-color: var(--main-bg-color-4);
   color: white;
   padding: 30px;
-  margin: 0 -16px;
 `;
 
 const BannerLink = styled.a`
