@@ -26,6 +26,6 @@ a {
 * {
   &:focus{
     outline: none;
-    color: green !important;
+    color: #a5ba40 !important;
   }
 }

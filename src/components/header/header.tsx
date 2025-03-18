@@ -12,6 +12,7 @@ const HeaderContainer = styled.div`
   color: white;
   position: sticky;
   top: 0;
+  z-index: 100;
 `;
 
 const NavigationItems = styled.div`

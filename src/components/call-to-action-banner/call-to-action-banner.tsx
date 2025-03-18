@@ -50,7 +50,7 @@ const CallToActionBanner: React.FC<CallToActionBannerProps> = ({
 }) => {
   return (
     <BannerSection className="call-to-action">
-      <h3>{title}</h3>
+      <h5>{title}</h5>
       <p>{text}</p>
       <ButtonContainer className="call-to-action-button-container">
         <p>{buttonPrefix}</p>

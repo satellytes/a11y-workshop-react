@@ -34,7 +34,7 @@ const RecipeImage = styled.img`
   object-fit: cover;
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
   margin: 8px 0;
 `;
 
